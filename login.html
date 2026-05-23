@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+
+</head>
+<body>
+    <div class="card">
+
+    <!-- Header -->
+    <div class="card-header">
+      <h1>Your <em>Log-In</em> Details</h1>
+    </div>
+    <div class="steam-bar"><div class="steam-fill"></div></div>
+
+    <!-- Form Body -->
+    <div class="card-body">
+      <form action="payment.html">
+
+        <!-- Customer Info -->
+        <p class="section-label">Customer Information</p>
+        <div class="form-grid">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">username <span class="req">*</span></label>
+              <div class="input-wrap">
+                <span class="input-icon">👤</span>
+                <input type="text" id="name" placeholder="Enter your username" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="password">Password <span class="req">*</span></label>
+              <div class="input-wrap">
+                <span class="input-icon">🔒</span>
+                <input type="password" id="password" placeholder="" required />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group span-full">
+            <label for="email">Email Address <span class="req">*</span></label>
+            <div class="input-wrap">
+              <span class="input-icon">✉️</span>
+              <input type="email" id="email" placeholder="you@example.com" required />
+            </div>
+            <div class="secure-note">🔒 Your information is safe &amp; encrypted</div>
+          </div>
+</body>
+</html>

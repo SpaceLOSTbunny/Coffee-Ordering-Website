@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brew & Bloom</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ────────── NAVBAR ────────── -->
+<nav class="nav">
+  <a class="brand" href="#">
+    <span class="icon-wrap"><i class="fa-solid fa-mug-hot"></i></span>
+    Brew <span>&nbsp;&amp;&nbsp;</span><span>Bloom</span>
+  </a>
+
+  <input type="checkbox" id="toggle">
+  <label for="toggle" class="menu-icon" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </label>
+
+  <ul class="menu">
+    <li><a href="#"><i class="fa-solid fa-house"></i> Home</a></li>
+    <li><a href="#"><i class="fa-solid fa-mug-saucer"></i> Products</a></li>
+    <li><a href="#"><i class="fa-solid fa-location-dot"></i> Locations</a></li>
+    <li><a href="#"><i class="fa-solid fa-phone"></i> Contact</a></li>
+    <li><a href="sign.html" class="btn"><i class="fa fa-plus-circle" aria-hidden="true"></i>Sign-In</a></li>
+    <li><a href="login.html" class="btn"><i class="fa-solid fa-circle-user"></i>Login</a></li>
+  </ul>
+</nav>
+
+<!-- ────────── HERO ────────── -->
+<section class="hero">
+  <div class="hero-inner">
+
+    <!-- LEFT -->
+    <div class="hero-text">
+      <p class="eyebrow">Est. 2019 · Artisan Coffee</p>
+
+      <h1 class="hero-title">
+        Crafted with<br>
+        <em>Passion &amp; Love</em>
+      </h1>
+
+      <p class="hero-sub">
+        Every cup tells a story — single-origin beans, precision roasted,
+        and brewed fresh in our cosy neighbourhood café.
+      </p>
+
+      <div class="hero-ctas">
+        <a href="order.html" class="cta-primary">
+          <i class="fa-solid fa-mug-hot"></i> Order Now
+        </a>
+        <a href="#" class="cta-secondary">
+          Explore Menu<a href="order.html" class="btn"> <i class="fa-solid fa-arrow-right"></i></a>
+        </a>
+      </div>
+
+      <div class="stats">
+        <div class="stat-item">
+          <div class="stat-num">18+</div>
+          <div class="stat-label">Origin Blends</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-num">4.9★</div>
+          <div class="stat-label">Avg Rating</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-num">12k</div>
+          <div class="stat-label">Happy Guests</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="hero-visual">
+      <div class="ring"></div>
+      <div class="glow-blob"></div>
+
+      <div class="img-card">
+        <div class="cup-art">
+          <!-- Elegant coffee cup SVG illustration -->
+          <svg viewBox="0 0 160 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Steam wisps -->
+            <path d="M58 30 C58 22, 66 18, 66 10" stroke="#D4A84B" stroke-width="2.5" stroke-linecap="round" opacity="0.6">
+              <animate attributeName="opacity" values="0.6;0.2;0.6" dur="2.5s" repeatCount="indefinite"/>
+              <animate attributeName="d" values="M58 30 C58 22, 66 18, 66 10;M58 32 C62 24, 60 18, 66 10;M58 30 C58 22, 66 18, 66 10" dur="2.5s" repeatCount="indefinite"/>
+            </path>
+            <path d="M80 26 C80 18, 88 14, 88 6" stroke="#D4A84B" stroke-width="2.5" stroke-linecap="round" opacity="0.5">
+              <animate attributeName="opacity" values="0.5;0.15;0.5" dur="2s" begin="0.4s" repeatCount="indefinite"/>
+            </path>
+            <path d="M102 30 C102 22, 94 18, 94 10" stroke="#D4A84B" stroke-width="2.5" stroke-linecap="round" opacity="0.6">
+              <animate attributeName="opacity" values="0.6;0.2;0.6" dur="3s" begin="0.8s" repeatCount="indefinite"/>
+            </path>
+
+            <!-- Saucer -->
+            <ellipse cx="80" cy="178" rx="58" ry="12" fill="#2a1208"/>
+            <ellipse cx="80" cy="175" rx="52" ry="9" fill="#3B1F14"/>
+            <ellipse cx="80" cy="173" rx="44" ry="6.5" fill="#4a2918"/>
+
+            <!-- Cup body -->
+            <path d="M38 80 L46 165 Q80 172 114 165 L122 80 Z" fill="url(#cupGrad)" rx="4"/>
+
+            <!-- Cup rim -->
+            <ellipse cx="80" cy="80" rx="42" ry="9" fill="#5C3317"/>
+            <ellipse cx="80" cy="80" rx="38" ry="7" fill="#6e3e1e"/>
+
+            <!-- Coffee surface -->
+            <ellipse cx="80" cy="80" rx="36" ry="6.5" fill="#1a0a04"/>
+
+            <!-- Latte art (leaf) -->
+            <ellipse cx="80" cy="80" rx="22" ry="4" fill="none" stroke="#D4A84B" stroke-width="1.2" opacity="0.55"/>
+            <line x1="80" y1="76" x2="80" y2="84" stroke="#D4A84B" stroke-width="1" opacity="0.55"/>
+            <path d="M70 79 Q75 77 80 79 Q75 81 70 79" fill="#D4A84B" opacity="0.45"/>
+            <path d="M90 79 Q85 77 80 79 Q85 81 90 79" fill="#D4A84B" opacity="0.45"/>
+
+            <!-- Handle -->
+            <path d="M122 100 Q148 100 148 122 Q148 144 122 144" stroke="#5C3317" stroke-width="10" fill="none" stroke-linecap="round"/>
+            <path d="M122 100 Q140 100 140 122 Q140 144 122 144" stroke="#6e3e1e" stroke-width="6" fill="none" stroke-linecap="round"/>
+
+            <!-- Shine -->
+            <path d="M50 95 Q55 88 60 93" stroke="rgba(253,246,236,0.2)" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+
+            <defs>
+              <linearGradient id="cupGrad" x1="38" y1="80" x2="122" y2="165" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#7a4225"/>
+                <stop offset="50%" stop-color="#5C3317"/>
+                <stop offset="100%" stop-color="#3B1F14"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <div class="badge">
+          <span class="badge-dot"></span>
+          Ethically Sourced Beans
+        </div>
+      </div>
+
+      <!-- floating info tag -->
+      <div class="float-tag">
+        <div class="tag-icon">☕</div>
+        <div class="tag-val">100%</div>
+        <div class="tag-label">Organic</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>
