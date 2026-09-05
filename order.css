@@ -1,0 +1,259 @@
+/* ==========================================================================
+   Brew & Bloom — Order Page Styles (order.css)
+   ========================================================================== */
+
+/* ────────── PALETTE & VARIABLES ────────── */
+:root {
+  --bg-dark: #120703;
+  --bg-card: rgba(42, 18, 8, 0.65);
+  --bg-input: rgba(26, 14, 8, 0.85);
+  
+  --gold-primary: #D4A84B;
+  --gold-light: #e5be6b;
+  --gold-glow: rgba(212, 168, 75, 0.2);
+  
+  --espresso: #3B1F14;
+  --cream: #FDFBF7;
+  --cream-muted: rgba(253, 251, 247, 0.7);
+  --border: rgba(212, 168, 75, 0.25);
+  --border-focus: rgba(212, 168, 75, 0.7);
+  
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'DM Sans', sans-serif;
+  
+  --shadow-card: 0 12px 32px rgba(0, 0, 0, 0.5);
+  --radius: 14px;
+  --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ────────── BASE & RESET ────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-dark);
+  color: var(--cream);
+  min-height: 100vh;
+  line-height: 1.6;
+  background-image: 
+    radial-gradient(circle at 15% 20%, rgba(212, 168, 75, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 85% 75%, rgba(59, 31, 20, 0.25) 0%, transparent 50%);
+  padding: 2rem 1rem;
+}
+
+/* ────────── MAIN CONTAINER ────────── */
+.order-container, 
+main {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+/* ────────── HEADER ────────── */
+.order-header, 
+header {
+  text-align: left;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1.5rem;
+}
+
+.eyebrow, 
+.order-header .sub-title {
+  color: var(--gold-primary);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.order-header h1, 
+h1 {
+  font-family: var(--font-serif);
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--cream);
+  margin-bottom: 0.4rem;
+}
+
+.order-header h1 em, 
+h1 em {
+  font-style: italic;
+  color: var(--gold-primary);
+}
+
+.order-header p {
+  color: var(--cream-muted);
+  font-size: 0.95rem;
+}
+
+/* ────────── FORM CARD CONTAINERS ────────── */
+form, 
+.order-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow-card);
+  margin-bottom: 2rem;
+}
+
+/* Form Section Headers */
+h2, h3, .section-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--gold-light);
+  margin: 1.5rem 0 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+h2:first-of-type, 
+h3:first-of-type {
+  margin-top: 0;
+}
+
+/* ────────── FORM FIELDS & LAYOUT ────────── */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-group.full-width {
+  grid-column: span 2;
+}
+
+label {
+  font-size: 0.85rem;
+  color: var(--cream-muted);
+  font-weight: 500;
+}
+
+/* Input, Select, Textarea Overrides */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  background-color: var(--bg-input) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px;
+  color: var(--cream) !important;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  outline: none;
+  transition: var(--transition);
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Input Focus States */
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--gold-primary) !important;
+  box-shadow: 0 0 10px var(--gold-glow), inset 0 2px 4px rgba(0,0,0,0.3) !important;
+  background-color: rgba(35, 18, 10, 0.95) !important;
+}
+
+/* Dropdown Option Styling */
+select option {
+  background-color: #1a0e08;
+  color: var(--cream);
+  padding: 10px;
+}
+
+/* Textarea Specifics */
+textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+/* Placeholder Styling */
+::placeholder {
+  color: rgba(253, 251, 247, 0.35);
+  font-size: 0.9rem;
+}
+
+/* ────────── BUTTONS & FOOTER NOTES ────────── */
+button[type="submit"],
+.btn-submit,
+input[type="submit"] {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, var(--gold-primary), #b38636);
+  color: var(--bg-dark);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  transition: var(--transition);
+  box-shadow: 0 4px 15px rgba(212, 168, 75, 0.25);
+}
+
+button[type="submit"]:hover,
+.btn-submit:hover,
+input[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 168, 75, 0.4);
+  background: linear-gradient(135deg, var(--gold-light), var(--gold-primary));
+}
+
+.security-note {
+  font-size: 0.8rem;
+  color: var(--cream-muted);
+  text-align: center;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.security-note i {
+  color: var(--gold-primary);
+}
+
+/* ────────── RESPONSIVE DESIGN ────────── */
+@media (max-width: 650px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-group.full-width {
+    grid-column: span 1;
+  }
+
+  body {
+    padding: 1rem 0.5rem;
+  }
+
+  form, .order-card {
+    padding: 1.25rem;
+  }
+}
